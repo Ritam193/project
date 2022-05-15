@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="array-inputs">
+                <p>Size of the array:</p>
+                <input id="a_size" type="range" min=10 max=101 step=1 value=50>
+                <p>Speed of the algorithm:</p>
+                <input id="a_speed" type="range" min=1 max=6 step=1 value=3>
+                <button id="a_generate">Generate New Array!</button>
+            </div>
+
+            <div class="header_right">
+                <p class="nav-heading">Sorting visualizer</p>
+
+                <div class="algos">
+                    <button id="btn1" onclick="show()">Bubble</button>
+                    <button id="btn2" onclick="show()">Insertion</button>
+                    <button id="btn3" onclick="show()">Merge</button>
+                    <button id="btn4" onclick="show()">Quick</button>
+                    <button id="btn5" onclick="show()" style="margin-right: 0px;">Heap</button>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+    <section>
+        <div id="Info_Cont1" class="left">
+            <!-- <p>This is First Container</p> -->
+            <div class="ColorKey">
+                <div class="ColorKey__Item">
+                    <div id="sorted"></div>
+                    <div class="box green"></div>
+                    <span>Sorted</span>
+                </div>
+                <div class="ColorKey__Item">
+                    <div id="comparing"></div>
+                    <div class="box yellow"></div>
+                    <span>Comparing</span>
+                </div>
+                <div class="ColorKey__Item">
+                    <div id="swapping"></div>
+                    <div class="box red"></div>
+                    <span>Swapping</span>
+                </div>
+            </div>
+            
+            <div id="info_cont2" class="left">
+                <aside class="info_aside">
+                    <h3>Performance</h3>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Worst-case time complexity</td>
+                                <td>
+                                    <code>
+                                        <span>
+                                            O(n<sup>2</sup>)
+                                        </span>
+                                    </code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Average time complexity</td>
+                                <td>
+                                    <code>
+                                        <span>
+                                            O(n<sup>2</sup>)
+                                        </span>       
+                                    </code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Best-case time complexity</td>
+                                <td>
+                                    <code>
+                                        <span>
+                                            O(n<sup>2</sup>)
+                                        </span>
+                                    </code>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Worst-case space complexity</td>
+                                <td>
+                                    <code>
+                                        <span>
+                                            O(n<sup>2</sup>)
+                                        </span>
+                                    </code>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </aside>
+            </div>
+        </div>
+        <div id="array_container">
+
+        </div>
+
+        <!-- <div id="Info_Cont2">
+            <p>This is Second Container</p>
+        </div> -->
+
+    </section>
+   
+    <footer>
+
+    </footer>
+
+    <script src="./scripts/initializer.js"></script>
+    <!--This should be at the end of body and should be loaded before sorts.js-->
+    <script src="./scripts/visual.js"></script>
+    <!--This should be loaded after main.js-->
+
+    <script src="./scripts/bubblesort.js"></script>
+    <script src="./scripts/insertionsort.js"></script>
+    <script src="./scripts/mergesort.js"></script>
+    <script src="./scripts/quicksort.js"></script>
+    <script src="./scripts/heapsort.js"></script>
+</body>
+
+</html>
